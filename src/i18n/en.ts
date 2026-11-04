@@ -8,7 +8,7 @@ const en = {
   meta: {
     title: "Juan Castelblanco · Software Developer",
     description:
-      "Juan David Rodriguez Castelblanco: software developer strong in JavaScript and React, with Node.js experience on AWS. Building Casshy, a gamified personal-finance app.",
+      "Juan David Rodriguez Castelblanco: software developer working in TypeScript across the stack, from React and Next.js to Node.js on AWS, now building GenAI features with LLM APIs, agentic workflows and MCP.",
   },
   nav: {
     about: "About",
@@ -34,14 +34,14 @@ const en = {
       { value: "AWS", label: "Certified Cloud Practitioner" },
       { value: "Tier 2 → 3", label: "Moving to Tier-3 support at OpenText" },
       { value: "Casshy", label: "Building a gamified personal-finance app" },
-      { value: "AI", label: "Learning agentic AI and LLM integrations" },
+      { value: "GenAI · MCP", label: "Building with LLM APIs, agentic workflows and MCP" },
     ],
   },
   about: {
     eyebrow: "About",
     title: "A bit about me",
     paragraphs: [
-      "I'm a software developer who likes building real products that ship and solve real problems. I work across the stack, from React and Next.js front ends to Node.js services on AWS, and I bring AI into what I build: LLM integrations and multi-agent workflows with tools like Claude Code and Codex. Right now that's Casshy, my own personal-finance app.",
+      "I'm a software developer who likes building real products that ship and solve real problems. I work in TypeScript across the stack, from React and Next.js interfaces to Node.js and NestJS APIs on AWS. Now I'm bringing GenAI into what I build: LLM APIs, prompt engineering, agentic workflows with Claude Code and Codex, and the Model Context Protocol (MCP). Right now that's Casshy, my own personal-finance app, and IncidentHub.",
       "I started coding at 17. Today I work in production support at OpenText, moving into Tier 3, so I know how real systems fail and how to fix them.",
       "Outside of tech, you'll find me playing soccer, at the gym, playing drums or gaming with friends.",
     ],
@@ -49,7 +49,7 @@ const en = {
   projects: {
     eyebrow: "Projects",
     title: "Selected work",
-    lead: "What I'm building now, plus full-stack, backend and AWS work I've shipped.",
+    lead: "What I'm building now, including GenAI features, plus full-stack, backend and AWS work I've shipped.",
     filters: { all: "All", backend: "Backend", web: "Web", aws: "AWS", extensions: "Extensions" },
     status: { progress: "In progress", use: "In use", shipped: "Shipped" },
     learnMore: "Learn more",
@@ -134,9 +134,10 @@ const en = {
     legendCore: "Built with it",
     legendUsed: "Hands-on",
     groups: {
-      frontend: "JavaScript & front end",
+      frontend: "Languages & web",
       backend: "Backend",
       aws: "AWS",
+      genai: "Generative AI",
       delivery: "Delivery & quality",
       data: "Databases",
       support: "Production support & tools",
@@ -149,8 +150,8 @@ const en = {
         applying: "Casshy: I plan with ADRs and build with agents, reviewing each diff.",
       },
       integrations: {
-        title: "AI integrations",
-        summary: "Calling LLMs from real apps: structured output, tool calling, and keeping keys and costs under control.",
+        title: "Going deeper with LLMs",
+        summary: "Taking LLM features further in real apps: structured output, tool calling and my own MCP servers, while keeping keys and costs under control.",
         applying: "IncidentHub: adding AI triage that summarizes each ticket and suggests its priority.",
       },
       casshy: {
@@ -179,7 +180,7 @@ const en = {
         role: "Technical Support Specialist",
         org: "OpenText",
         bullets: [
-          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/QC, Octane/ValueEdge), moving from Tier-2 into Tier-3 escalations.",
+          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/Quality Center, UFT One), moving from Tier-2 into Tier-3 escalations.",
           "Troubleshoot authentication (SSO, OAuth 2.0), integration and performance incidents using Linux/Windows, SQL, Jenkins and system logs, and analyze ticket data to find root causes and recurring issues.",
           "Partner with Operations, Engineering and R&D in an SLA-driven environment to resolve complex escalations.",
           "Built Timer SaaS Team, a web extension that returns agents to Available after breaks, with countdown, logs and timer recovery.",
@@ -198,8 +199,9 @@ const en = {
         role: "Application Developer",
         org: "Government of Ontario",
         bullets: [
-          "Built an internal web page with React.",
-          "Worked with developers and designers on that page to fix bugs, add features and improve the user experience.",
+          "Built responsive front-end features for an internal web application with React, Next.js and TypeScript, turning UI/UX designs into production-ready, reusable components.",
+          "Integrated the UI with Node.js and PostgreSQL, and improved front-end performance and cross-browser behavior.",
+          "Wrote Jest unit tests and documented components and workflows for the development team in an Agile setting.",
         ],
       },
       {
@@ -211,7 +213,7 @@ const en = {
       },
       {
         kind: "education" as ExperienceKind,
-        when: "Jan 2021 — Jan 2024 · Toronto, ON",
+        when: "May 2021 — Apr 2024 · Toronto, ON",
         role: "Computer Programming and Analysis (Advanced Diploma)",
         org: "Seneca Polytechnic",
         bullets: [
@@ -226,7 +228,7 @@ const en = {
     eyebrow: "Contact",
     title: "Let's build something",
     highlight: "reliable.",
-    lead: "I'm looking for Software Developer roles: front end, full-stack or backend. The fastest way to reach me is email.",
+    lead: "I'm looking for Software Developer roles where I can build across the stack and bring GenAI into real products. The fastest way to reach me is email.",
     email: "Email me",
     offClock: "Off the clock: soccer ⚽ · gym 🏋️ · drums 🥁 · video games 🎮",
     footer: "Built with Astro, React, shadcn/ui and Motion",
