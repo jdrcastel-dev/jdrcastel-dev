@@ -107,12 +107,15 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   Docker, CI/CD, SQL, root-cause/log analysis, GitHub Copilot, Claude Code, AWS Cloud Practitioner.
 - **Hands-on:** ECS, ECR, S3, DynamoDB, Cognito, GitHub Actions, Jest, Jenkins, Git, Linux, Bash, MongoDB,
   SQL Server, OAuth 2.0, Java (college), OOP.
-- **Learning (only in the Learning tab):** OpenAI Codex, LLM integrations, MCP, Casshy's stack
+- **Learning (only in the Learning tab):** OpenAI Codex, structured output, tool calling, building MCP servers, Casshy's stack
   (NestJS, Prisma, PostgreSQL, Turborepo, Better Auth, Zod, Rive, k3s), Spring Boot, Spring Data JPA, JUnit.
 - IncidentHub: TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker (support-incident API with SLAs and AI
   triage). Java and Spring Boot stay in Learning with no project attached.
-- **Never list:** Python, FastAPI, .NET, C++, Kubernetes, Terraform, Lambda, IAM, VPC, SAML, LDAP, Power Apps.
-- Ontario Government internship: a React web page (no LDAP, no Power Apps claims).
+- **Never list:** Python, FastAPI, .NET, Kubernetes, Terraform, Lambda, IAM, VPC, SAML, LDAP, Power Apps.
+- Ontario Government internship: internal web app with React, Next.js, TypeScript, Node.js, PostgreSQL and Jest (as on
+  the resume; no LDAP, no Power Apps claims).
+- GenAI is a Skills group: LLM APIs, prompt engineering, agentic workflows, MCP, Claude Code, GitHub Copilot. C++ is
+  hands-on. OpenText products: LoadRunner Enterprise, ALM/Quality Center, UFT One. Seneca: May 2021 – Apr 2024.
 - Timer SaaS Team is a **web extension**: it shows under "All" (last) and under its own "Extensions" filter.
 - Casshy: Phase 0 done (vision, docs, ADRs), Phase 1 in progress, **no app code yet**. Never present it as live.
 
@@ -163,6 +166,8 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - 2026-10: Claude Code is a Strong skill (Juan masters it): Skills tab and resume Tools, not Learning.
 - 2026-10: Fragments is named "Fragments — Cloud REST API on AWS" on the site, resume and README.
 - 2026-10: Name without accent everywhere: "Rodriguez".
-- 2026-11: Spotlight glow on all cards, not only projects. Copy is general, not "front end" (contact, skills group
+- 2026-11: (GenAI part replaced below) Spotlight glow on all cards, not only projects. Copy is general, not "front end" (contact, skills group
   "Languages & web"). GenAI/MCP (LLM APIs, prompt engineering, agentic workflows, MCP) added as Learning, following the
   resume's direction while the site keeps "Software Developer".
+- 2026-11: Juan aligned the site with his resume (C++, Ontario internship, UFT One, Seneca dates, GenAI as a skill
+  group). Title stays "Software Developer" on the site; the resume update is postponed.

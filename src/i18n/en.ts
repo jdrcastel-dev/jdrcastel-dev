@@ -34,7 +34,7 @@ const en = {
       { value: "AWS", label: "Certified Cloud Practitioner" },
       { value: "Tier 2 → 3", label: "Moving to Tier-3 support at OpenText" },
       { value: "Casshy", label: "Building a gamified personal-finance app" },
-      { value: "GenAI · MCP", label: "Learning LLM APIs, agentic workflows and MCP" },
+      { value: "GenAI · MCP", label: "Building with LLM APIs, agentic workflows and MCP" },
     ],
   },
   about: {
@@ -137,6 +137,7 @@ const en = {
       frontend: "Languages & web",
       backend: "Backend",
       aws: "AWS",
+      genai: "Generative AI",
       delivery: "Delivery & quality",
       data: "Databases",
       support: "Production support & tools",
@@ -149,8 +150,8 @@ const en = {
         applying: "Casshy: I plan with ADRs and build with agents, reviewing each diff.",
       },
       integrations: {
-        title: "Generative AI & MCP",
-        summary: "Bringing LLMs into real apps: prompt engineering, structured output, tool calling and MCP servers, while keeping keys and costs under control.",
+        title: "Going deeper with LLMs",
+        summary: "Taking LLM features further in real apps: structured output, tool calling and my own MCP servers, while keeping keys and costs under control.",
         applying: "IncidentHub: adding AI triage that summarizes each ticket and suggests its priority.",
       },
       casshy: {
@@ -179,7 +180,7 @@ const en = {
         role: "Technical Support Specialist",
         org: "OpenText",
         bullets: [
-          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/QC, Octane/ValueEdge), moving from Tier-2 into Tier-3 escalations.",
+          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/Quality Center, UFT One), moving from Tier-2 into Tier-3 escalations.",
           "Troubleshoot authentication (SSO, OAuth 2.0), integration and performance incidents using Linux/Windows, SQL, Jenkins and system logs, and analyze ticket data to find root causes and recurring issues.",
           "Partner with Operations, Engineering and R&D in an SLA-driven environment to resolve complex escalations.",
           "Built Timer SaaS Team, a web extension that returns agents to Available after breaks, with countdown, logs and timer recovery.",
@@ -198,8 +199,9 @@ const en = {
         role: "Application Developer",
         org: "Government of Ontario",
         bullets: [
-          "Built an internal web page with React.",
-          "Worked with developers and designers on that page to fix bugs, add features and improve the user experience.",
+          "Built responsive front-end features for an internal web application with React, Next.js and TypeScript, turning UI/UX designs into production-ready, reusable components.",
+          "Integrated the UI with Node.js and PostgreSQL, and improved front-end performance and cross-browser behavior.",
+          "Wrote Jest unit tests and documented components and workflows for the development team in an Agile setting.",
         ],
       },
       {
@@ -211,7 +213,7 @@ const en = {
       },
       {
         kind: "education" as ExperienceKind,
-        when: "Jan 2021 — Jan 2024 · Toronto, ON",
+        when: "May 2021 — Apr 2024 · Toronto, ON",
         role: "Computer Programming and Analysis (Advanced Diploma)",
         org: "Seneca Polytechnic",
         bullets: [
