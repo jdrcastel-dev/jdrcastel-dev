@@ -85,7 +85,8 @@ folds it into the `animation` shorthand otherwise and browsers drop it.
 - **About:** words light up line by line as you scroll (`.read-word`, CSS view timelines; static where unsupported).
 - **Projects:** filter pill slides between filters (Motion `layoutId`), cards fade/reflow (`AnimatePresence`,
   `layout="position"`), border beam on the featured Casshy card, Fragments architecture diagram with light pulses
-  (pulses pause off screen), mouse spotlight on cards.
+  (pulses pause off screen).
+- **Card spotlight:** blue glow that follows the mouse on every card (projects, hero stats, skills, learning, contact).
 - **Experience timeline:** line fills and dots light up with scroll.
 - **Theme switch:** circle reveal from the toggle (View Transitions).
 - **Logo:** "Juan Castelblanco" turns brand blue on hover.
@@ -162,3 +163,6 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - 2026-10: Claude Code is a Strong skill (Juan masters it): Skills tab and resume Tools, not Learning.
 - 2026-10: Fragments is named "Fragments — Cloud REST API on AWS" on the site, resume and README.
 - 2026-10: Name without accent everywhere: "Rodriguez".
+- 2026-11: Spotlight glow on all cards, not only projects. Copy is general, not "front end" (contact, skills group
+  "Languages & web"). GenAI/MCP (LLM APIs, prompt engineering, agentic workflows, MCP) added as Learning, following the
+  resume's direction while the site keeps "Software Developer".

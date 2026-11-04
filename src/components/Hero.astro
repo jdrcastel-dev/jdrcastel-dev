@@ -42,7 +42,7 @@ const roleWords = t.hero.role.split(" ").map((w, i) => ({ w, i: i + helloWords.l
   <ul class="mx-auto grid max-w-5xl grid-cols-2 gap-3 px-4 pb-12 lg:grid-cols-4">
     {t.hero.stats.map((s, i) => (
       <li class="hero-in" style={`--d:${500 + i * 70}ms`}>
-        <Card className="lift h-full gap-1 py-4">
+        <Card className="lift spotlight relative h-full gap-1 py-4">
           <CardContent className="px-4">
             <p class="text-2xl font-semibold tracking-tight">{s.value}</p>
             <p class="text-sm text-muted-foreground">{s.label}</p>

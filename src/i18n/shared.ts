@@ -58,11 +58,11 @@ export const skillChips: Record<string, { icon: string; skills: Skill[] }> = {
 export const learningChips: Record<string, { icon: string; items: string[] }> = {
   agentic: {
     icon: "🤖",
-    items: ["OpenAI Codex", "Agent workflows", "Prompting for code", "Reviewing AI code"],
+    items: ["OpenAI Codex", "Agentic workflows", "Prompting for code", "Reviewing AI code"],
   },
   integrations: {
     icon: "🧠",
-    items: ["LLM APIs (Claude, OpenAI)", "Structured output", "Tool calling", "MCP basics"],
+    items: ["LLM APIs (Claude, OpenAI)", "Prompt engineering", "Structured output (Zod)", "Tool calling", "MCP (Model Context Protocol)"],
   },
   casshy: {
     icon: "🏗️",

@@ -367,7 +367,7 @@ figure:not([data-active]) .beam-pulse,
   to { background-color: var(--brand); box-shadow: 0 0 0 4px color-mix(in oklab, var(--brand) 20%, transparent); }
 }
 
-/* Project cards: soft glow that follows the mouse (position set in Layout.astro) */
+/* Cards (projects, stats, skills, contact): soft glow that follows the mouse (position set in Layout.astro) */
 .spotlight::before {
   content: "";
   position: absolute;
