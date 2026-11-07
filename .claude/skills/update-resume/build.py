@@ -23,9 +23,9 @@ TAB = '<w:tabs><w:tab w:val="right" w:pos="10800"/></w:tabs>'
 # Hyperlinks: relationship id -> URL (rId5-rId8 exist in the template; the rest are added)
 LINKS = {
     "rId5": "mailto:jdrcastel@gmail.com",
-    "rId6": "https://jdrcastel-cpu.github.io/jdrcastel-cpu/",
+    "rId6": "https://jdrcastel-dev.github.io/jdrcastel-dev/",
     "rId7": "https://www.linkedin.com/in/jdcastel/",
-    "rId8": "https://github.com/jdrcastel-cpu",
+    "rId8": "https://github.com/jdrcastel-dev",
     "rId11": "https://github.com/jdcastel/Microservice-fragments-Cloud-Computing",
     "rId12": "https://github.com/jdcastel/Microservice-fragments-UI",
     "rId13": "https://github.com/jdrcastel/Timer-SaaS-Team",
@@ -94,8 +94,8 @@ CONTENT = [
     name("Juan David Rodriguez Castelblanco"),
     tagline("Software Developer  |  JavaScript · React · Node.js · AWS · Java"),
     p('<w:spacing w:after="20"/><w:jc w:val="center"/>',
-      run("Ontario, Canada") + sep + link("rId5", "jdrcastel@gmail.com") + sep + link("rId6", "jdrcastel-cpu.github.io/jdrcastel-cpu")
-      + sep + link("rId7", "linkedin.com/in/jdcastel") + sep + link("rId8", "github.com/jdrcastel-cpu")),
+      run("Ontario, Canada") + sep + link("rId5", "jdrcastel@gmail.com") + sep + link("rId6", "jdrcastel-dev.github.io/jdrcastel-dev")
+      + sep + link("rId7", "linkedin.com/in/jdcastel") + sep + link("rId8", "github.com/jdrcastel-dev")),
 
     heading("Summary"),
     para("Software developer with strong JavaScript and front-end skills (React, Next.js, TypeScript) who also built a Node.js "

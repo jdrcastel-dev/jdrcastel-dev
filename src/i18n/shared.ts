@@ -5,7 +5,7 @@ export const person = {
   short: "Juan Castelblanco",
   email: "jdrcastel@gmail.com",
   linkedin: "https://www.linkedin.com/in/jdcastel/",
-  github: "https://github.com/jdrcastel-cpu",
+  github: "https://github.com/jdrcastel-dev",
   resume: "Resume_Juan_Castelblanco.pdf",
 };
 

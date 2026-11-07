@@ -1,6 +1,6 @@
 # Juan Castelblanco · Portfolio
 
-Single-page portfolio in English, published at https://jdrcastel-cpu.github.io/jdrcastel-cpu/.
+Single-page portfolio in English, published at https://jdrcastel-dev.github.io/jdrcastel-dev/.
 This repo is also Juan's GitHub profile repo: `README.md` is his profile page, not project docs.
 
 ## Rules from Juan (always follow)
@@ -31,7 +31,7 @@ This repo is also Juan's GitHub profile repo: `README.md` is his profile page, n
 - Tailwind CSS v4 + shadcn/ui (new-york style, neutral base, blue `brand` accent) in `src/components/ui/`
 - Fonts: Geist and Geist Mono through the Astro Fonts API with the local provider, from the
   `@fontsource-variable/geist*` npm packages (self-hosted, no external requests; works in the sandbox and CI)
-- Deploy: GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`), `BASE_PATH=/jdrcastel-cpu`
+- Deploy: GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`), `BASE_PATH=/jdrcastel-dev`
 - Node ≥ 22.23.4 (Astro 7.4 requirement). CI uses the latest LTS.
 
 ## Commands
@@ -39,7 +39,7 @@ This repo is also Juan's GitHub profile repo: `README.md` is his profile page, n
 ```bash
 npm install
 npm run dev                                                         # http://localhost:4321
-SITE=https://jdrcastel-cpu.github.io BASE_PATH=/jdrcastel-cpu npm run build # same build as production
+SITE=https://jdrcastel-dev.github.io BASE_PATH=/jdrcastel-dev npm run build # same build as production
 npm run preview
 ```
 
@@ -68,7 +68,7 @@ public/               favicon.svg, og.png (1200×630 preview), resume PDF
   code window dots.
 - Accessibility (WCAG AA): semantic landmarks, labelled sections, `aria-pressed`/`aria-expanded` on toggles,
   visible focus, `prefers-reduced-motion` respected, external links `rel="noopener"`.
-- All URLs to pages/assets go through `homeUrl()` / `assetUrl()` so the `/jdrcastel-cpu` base path works.
+- All URLs to pages/assets go through `homeUrl()` / `assetUrl()` so the `/jdrcastel-dev` base path works.
 
 ## Animations (approved by Juan; propose new ones and wait for his OK)
 
@@ -176,6 +176,6 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - 2026-11: Resume tells Juan's real story, no exaggeration: Ontario is a React web page; no "(In Progress)" or
   "(Completed)" labels on projects. The resume source is `.claude/skills/update-resume/resume.html` (Juan's format).
 - 2026-11: Juan's GitHub account was suspended; changes wait locally until he has access again.
-- 2026-11: New GitHub account `jdrcastel-cpu` (the old `jdrcastel` was suspended). Repo `jdrcastel-cpu/jdrcastel-cpu`,
-  site at https://jdrcastel-cpu.github.io/jdrcastel-cpu/. IncidentHub and Timer code links removed until Juan
+- 2026-11: New GitHub account `jdrcastel-dev` (the old `jdrcastel` was suspended). Repo `jdrcastel-dev/jdrcastel-dev`,
+  site at https://jdrcastel-dev.github.io/jdrcastel-dev/. IncidentHub and Timer code links removed until Juan
   re-uploads those repos.

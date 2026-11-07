@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://jdrcastel-cpu.github.io/jdrcastel-cpu/"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://jdrcastel-dev.github.io/jdrcastel-dev/"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/jdcastel/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:jdrcastel@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>

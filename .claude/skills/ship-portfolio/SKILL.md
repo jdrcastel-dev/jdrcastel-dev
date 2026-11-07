@@ -10,12 +10,12 @@ description: Build, check in a browser, commit and open a PR for portfolio chang
    `npm i node@24 --prefix /home/user/tools/node24` and prepend `/home/user/tools/node24/node_modules/node/bin`
    to `PATH`. Then run:
    ```bash
-   SITE=https://jdrcastel-cpu.github.io BASE_PATH=/jdrcastel-cpu npx astro build
-   SITE=https://jdrcastel-cpu.github.io BASE_PATH=/jdrcastel-cpu npx astro preview --port 4321
+   SITE=https://jdrcastel-dev.github.io BASE_PATH=/jdrcastel-dev npx astro build
+   SITE=https://jdrcastel-dev.github.io BASE_PATH=/jdrcastel-dev npx astro preview --port 4321
    ```
 2. **Check in a browser** with Playwright (Chromium at `/opt/pw-browsers/chromium`; in the cloud sandbox import
    Playwright from `/opt/node-tools/node_modules/playwright/index.mjs`):
-   - Page `/jdrcastel-cpu/`, at 1280 and 390 wide, light and dark.
+   - Page `/jdrcastel-dev/`, at 1280 and 390 wide, light and dark.
    - No console errors or 404s, and no horizontal scroll.
    - Filters (pill slides, "All" shows every project, "Extensions" only Timer), "Learn more", tabs, experience
      details, the theme circle, the mobile menu, the resume download and in-page links (smooth

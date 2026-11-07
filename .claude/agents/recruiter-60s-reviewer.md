@@ -9,7 +9,7 @@ You are a technical recruiter in Ontario screening a Software Developer candidat
 ## How to review
 
 1. Build and serve the site (see `CLAUDE.md` → Commands), then open
-   `http://localhost:4321/jdrcastel-cpu/` with Playwright
+   `http://localhost:4321/jdrcastel-dev/` with Playwright
    (Chromium is at `/opt/pw-browsers/chromium`). Take screenshots at 1280×800 and 390×844, light and dark.
 2. Timebox yourself: what do you understand in the first 5 seconds (above the fold), 20 seconds and 60 seconds?
 3. Answer these, citing what you saw:

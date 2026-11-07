@@ -1,7 +1,7 @@
 # Portfolio site
 
 Single-page portfolio (English) built with Astro 7, React islands, Tailwind CSS v4 and shadcn/ui,
-deployed to GitHub Pages: https://jdrcastel-cpu.github.io/jdrcastel-cpu/.
+deployed to GitHub Pages: https://jdrcastel-dev.github.io/jdrcastel-dev/.
 
 - Content: `src/i18n/en.ts` (text) and `src/i18n/shared.ts` (links, tech, project metadata).
 - Run locally: `npm install && npm run dev` (Node ≥ 22.23.4).

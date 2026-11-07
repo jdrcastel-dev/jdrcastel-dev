@@ -26,8 +26,8 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          SITE: https://jdrcastel-cpu.github.io
-          BASE_PATH: /jdrcastel-cpu
+          SITE: https://jdrcastel-dev.github.io
+          BASE_PATH: /jdrcastel-dev
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
