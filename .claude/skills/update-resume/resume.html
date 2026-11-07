@@ -30,9 +30,9 @@
 <p class="contact">Canada | +1 437-557-1222 | <a href="mailto:jdrcastel@gmail.com">jdrcastel@gmail.com</a> | <a href="https://jdrcastel.github.io/jdrcastel/">jdrcastel.github.io/jdrcastel</a> | <a href="https://www.linkedin.com/in/jdcastel/">linkedin.com/in/jdcastel</a> | <a href="https://github.com/jdrcastel">github.com/jdrcastel</a></p>
 
 <h2>Summary</h2>
-<p class="in" style="margin:0">Software developer focused on React, TypeScript and Node.js. Shipped a containerized REST API on AWS with Docker and CI/CD
-and a browser extension used by the OpenText SaaS support team. Built front-end features for an internal application at the
-Government of Ontario, and debugs production systems for enterprise SaaS platforms at OpenText.</p>
+<p class="in" style="margin:0">Software developer focused on React, TypeScript and Node.js. Started with a React internship at the Government of Ontario,
+built a REST API on AWS with Docker and CI/CD, and now debugs production systems for enterprise SaaS platforms at OpenText,
+where I also built a browser extension the support team uses. Building IncidentHub and Casshy to keep growing as a developer.</p>
 
 <h2>Experience</h2>
 <div class="in">
@@ -40,32 +40,31 @@ Government of Ontario, and debugs production systems for enterprise SaaS platfor
   <div class="row org"><span>OpenText</span><span>Waterloo, ON</span></div>
   <ul>
     <li>Investigate production incidents for global enterprise customers on OpenText SaaS platforms (LoadRunner Enterprise, Application Lifecycle Management/Quality Center, UFT One); analyze failures and coordinate technical escalations.</li>
-    <li>Debug authentication (SSO, OAuth 2.0), integration and performance issues by reading system logs, querying SQL and checking Jenkins jobs on Linux/Windows; analyze ticket data to find root causes and recurring defects.</li>
+    <li>Debug authentication (SSO, OAuth 2.0), integration and performance issues using Linux/Windows, SQL, Jenkins and system logs; analyze ticket data to find root causes and recurring defects.</li>
     <li>Built Timer SaaS Team, a JavaScript (Manifest V3) browser extension used by the SaaS support team that returns agents to Available after breaks, with JSON logs and timer recovery after restarts (<a href="https://github.com/jdrcastel/Timer-SaaS-Team">code</a>).</li>
     <li>Partner with Operations, Engineering and R&amp;D in an SLA-driven environment to resolve complex customer issues.</li>
   </ul>
   <div class="row role"><span>Application Developer (Internship)</span><span>September 2022 - April 2023</span></div>
   <div class="row org"><span>Government of Ontario</span><span>Toronto, ON</span></div>
   <ul>
-    <li>Built front-end features for an internal web application with React, Next.js and TypeScript, turning requirements and design specs into production-ready, reusable components.</li>
-    <li>Integrated the UI with Node.js services and a PostgreSQL database, and fixed bugs and cross-browser issues found by QA.</li>
-    <li>Wrote Jest unit tests and documented components and workflows for the development team in an Agile setting.</li>
+    <li>Built an internal web page with React, my first time writing code for a real team.</li>
+    <li>Worked with developers and designers on that page to fix bugs, add features and improve the user experience.</li>
   </ul>
 </div>
 
 <h2>Projects</h2>
 <div class="in">
-  <div class="proj"><b>Fragments — Cloud REST API on AWS (Completed)</b> | <i>Node.js, Express, AWS, Docker</i> | <a href="https://github.com/jdcastel/Microservice-fragments-Cloud-Computing">API code</a> | <a href="https://github.com/jdcastel/Microservice-fragments-UI">UI code</a></div>
+  <div class="proj"><b>Fragments — Cloud REST API on AWS</b> | <i>Node.js, Express, AWS, Docker</i> | <a href="https://github.com/jdcastel/Microservice-fragments-Cloud-Computing">API code</a> | <a href="https://github.com/jdcastel/Microservice-fragments-UI">UI code</a></div>
   <ul>
     <li>REST API on AWS to store and convert text and image fragments, with Cognito JWT auth, S3 and DynamoDB.</li>
     <li>CI with ESLint, Jest and Hurl integration tests; CD builds the Docker image, pushes it to ECR and deploys to ECS.</li>
   </ul>
-  <div class="proj"><b>IncidentHub (In Progress)</b> | <i>TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker</i> | <a href="https://github.com/jdrcastel/incidenthub">Code</a></div>
+  <div class="proj"><b>IncidentHub</b> | <i>TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker</i> | <a href="https://github.com/jdrcastel/incidenthub">Code</a></div>
   <ul>
     <li>NestJS REST API for incident management with priority-based SLAs, breach detection and ticket status workflows.</li>
     <li>LLM-assisted triage that summarizes new tickets and suggests a priority, with a human confirming each recommendation.</li>
   </ul>
-  <div class="proj"><b>Casshy (In Progress)</b> | <i>TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo</i></div>
+  <div class="proj"><b>Casshy</b> | <i>TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo</i></div>
   <ul>
     <li>Canadian personal-finance app combining budgeting, financial education and a virtual companion; vision and ADRs done.</li>
     <li>Defined the architecture (monorepo, pure domain packages), integer-based money handling and versioned tax rules.</li>

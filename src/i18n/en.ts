@@ -198,9 +198,8 @@ const en = {
         role: "Application Developer",
         org: "Government of Ontario",
         bullets: [
-          "Built front-end features for an internal web application with React, Next.js and TypeScript, turning requirements and design specs into production-ready, reusable components.",
-          "Integrated the UI with Node.js services and a PostgreSQL database, and fixed bugs and cross-browser issues found by QA.",
-          "Wrote Jest unit tests and documented components and workflows for the development team in an Agile setting.",
+          "Built an internal web page with React, my first time writing code for a real team.",
+          "Worked with developers and designers on that page to fix bugs, add features and improve the user experience.",
         ],
       },
       {

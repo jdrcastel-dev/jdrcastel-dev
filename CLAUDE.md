@@ -112,8 +112,8 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - IncidentHub: TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker (support-incident API with SLAs and AI
   triage). Java and Spring Boot stay in Learning with no project attached.
 - **Never list:** Python, FastAPI, .NET, C++, Kubernetes, Terraform, Lambda, IAM, VPC, SAML, LDAP, Power Apps.
-- Ontario Government internship: internal web app with React, Next.js, TypeScript, Node.js, PostgreSQL and Jest (as on
-  the resume; no LDAP, no Power Apps claims).
+- Ontario Government internship: an internal web page with React, working with developers and designers (no Next.js,
+  Node.js, PostgreSQL, Jest, LDAP or Power Apps claims: Juan found those exaggerated).
 - OpenText products: LoadRunner Enterprise, ALM/Quality Center, UFT One. Seneca: May 2021 – Apr 2024.
 - Timer SaaS Team is a **web extension**: it shows under "All" (last) and under its own "Extensions" filter.
 - Casshy: Phase 0 done (vision, docs, ADRs), Phase 1 in progress, **no app code yet**. Never present it as live.
@@ -173,3 +173,6 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - 2026-11: Resume v2 ("Software Developer | JavaScript · TypeScript · React · Node.js · AWS") is the source of truth.
   C++ removed; GenAI/MCP back in Learning (Claude Code and Copilot stay Strong tools). No "Tier 2 → 3" anywhere: the
   hero stat is "OpenText · Debugging enterprise SaaS in production". IncidentHub links to its code repo.
+- 2026-11: Resume tells Juan's real story, no exaggeration: Ontario is a React web page; no "(In Progress)" or
+  "(Completed)" labels on projects. The resume source is `.claude/skills/update-resume/resume.html` (Juan's format).
+- 2026-11: Juan's GitHub account was suspended; changes wait locally until he has access again.
