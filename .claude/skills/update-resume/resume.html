@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Juan Castelblanco · Software Developer Resume</title>
 <style>
-  @page { size: Letter; margin: 0.4in 0.55in; }
+  @page { size: Letter; margin: 0.35in 0.55in 0.3in; }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: "Liberation Serif", "Times New Roman", Times, serif; font-size: 10pt; line-height: 1.17; color: #000; }
   a { color: #000; }
@@ -50,6 +50,11 @@ where I also built a browser extension the support team uses. Building IncidentH
     <li>Built an internal web page with React, my first time writing code for a real team.</li>
     <li>Worked with developers and designers on that page to fix bugs, add features and improve the user experience.</li>
   </ul>
+  <div class="row role"><span>Technical Support Engineer (Volunteer)</span><span>2022 - 2023</span></div>
+  <div class="row org"><span>Hispanotech</span><span>Toronto, ON</span></div>
+  <ul>
+    <li>Organized technical workshops and networking sessions for Latin American tech professionals in Canada.</li>
+  </ul>
 </div>
 
 <h2>Projects</h2>
@@ -57,17 +62,20 @@ where I also built a browser extension the support team uses. Building IncidentH
   <div class="proj"><b>Fragments — Cloud REST API on AWS</b> | <i>Node.js, Express, AWS, Docker</i> | <a href="https://github.com/jdcastel/Microservice-fragments-Cloud-Computing">API code</a> | <a href="https://github.com/jdcastel/Microservice-fragments-UI">UI code</a></div>
   <ul>
     <li>REST API on AWS to store and convert text and image fragments, with Cognito JWT auth, S3 and DynamoDB.</li>
+    <li>Converts between text, Markdown, HTML and image formats (sharp), with a separate web UI.</li>
     <li>CI with ESLint, Jest and Hurl integration tests; CD builds the Docker image, pushes it to ECR and deploys to ECS.</li>
   </ul>
   <div class="proj"><b>IncidentHub</b> | <i>TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker</i> | <a href="https://github.com/jdrcastel/incidenthub">Code</a></div>
   <ul>
     <li>NestJS REST API for incident management with priority-based SLAs, breach detection and ticket status workflows.</li>
     <li>LLM-assisted triage that summarizes new tickets and suggests a priority, with a human confirming each recommendation.</li>
+    <li>Built phase by phase, one new skill at a time; next come JWT security, tests, CI/CD and AWS deployment.</li>
   </ul>
   <div class="proj"><b>Casshy</b> | <i>TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo</i></div>
   <ul>
     <li>Canadian personal-finance app combining budgeting, financial education and a virtual companion; vision and ADRs done.</li>
     <li>Defined the architecture (monorepo, pure domain packages), integer-based money handling and versioned tax rules.</li>
+    <li>Built with Claude Code: ADR-driven plans, custom skills and sub-agents, and a review of every diff.</li>
   </ul>
 </div>
 
@@ -81,20 +89,21 @@ where I also built a browser extension the support team uses. Building IncidentH
   <p><b>Tools &amp; Practices:</b> Git/GitHub, Jest, Claude Code, GitHub Copilot, Agile</p>
   <p><b>Currently Learning:</b> LLM APIs, Prompt Engineering, Agentic Workflows, MCP, OpenAI Codex, Spring Boot</p>
   <p><b>Languages:</b> Spanish (native), English (professional)</p>
+  <p><b>Interests:</b> Soccer, gym, drums, video games</p>
 </div>
 
 <h2>Education</h2>
 <div class="in">
   <div class="row role" style="margin-top:2px"><span>Computer Programming and Analysis (Advanced Diploma)</span><span>May 2021 - April 2024</span></div>
   <div class="row org"><span>Seneca Polytechnic</span><span>Toronto, ON</span></div>
-  <p style="margin:0">Relevant Coursework: Object-Oriented Programming, Cloud Infrastructure, Database Systems, Data Structures</p>
+  <p style="margin:0">Relevant Coursework: Java, Object-Oriented Programming, Cloud Infrastructure, Database Systems, Data Structures</p>
 </div>
 
 <h2>Certifications and Achievements</h2>
 <ul>
   <li>AWS Certified Cloud Practitioner</li>
+  <li>Platzi certificates: Advanced Algorithms, REST API with JavaScript, Object-Oriented Programming.</li>
   <li>President's Honour List, Summer and Fall 2023, Seneca Polytechnic</li>
-  <li>Hispanotech volunteer: organized technical workshops and networking sessions for Latin American tech professionals.</li>
 </ul>
 </body>
 </html>
