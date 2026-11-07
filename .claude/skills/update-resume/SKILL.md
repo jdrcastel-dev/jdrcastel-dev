@@ -7,7 +7,10 @@ description: Update Juan's resume (Word + PDF) when he asks. Rebuilds both from 
 
 Only when Juan asks (CLAUDE.md rule 2). The resume is English only and must say the same as the portfolio.
 
-1. **Edit the content** in `build.py` (`CONTENT` list; links in `LINKS`). Check it against `src/i18n/en.ts` and
+0. **Source of truth (since 2026-11):** `resume.html` is Juan's current format (HTML printed by Chromium, US Letter,
+   one page). Edit it, then print it with Playwright (`page.pdf({ format: "Letter", preferCSSPageSize: true })`) and
+   check it is exactly one page. Send Juan the PDF; `build.py` (Word) is the older format, use it only if he asks for Word.
+1. **(Word, older format) Edit the content** in `build.py` (`CONTENT` list; links in `LINKS`). Check it against `src/i18n/en.ts` and
    CLAUDE.md "Content truth": same projects, stacks, dates and Learning items, nothing over-claimed.
    `template.docx` is Juan's original Word file; only its formatting is reused. Don't edit it.
 2. **Build** into the scratchpad (needs LibreOffice and poppler, both in the cloud sandbox):

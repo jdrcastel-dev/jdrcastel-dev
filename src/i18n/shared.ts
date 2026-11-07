@@ -18,7 +18,7 @@ export const skillChips: Record<string, { icon: string; skills: Skill[] }> = {
     skills: [
       { name: "JavaScript", core: true }, { name: "TypeScript", core: true }, { name: "React", core: true },
       { name: "Next.js", core: true }, { name: "Redux", core: true }, { name: "HTML/CSS", core: true },
-      { name: "Responsive UI", core: true }, { name: "C++" },
+      { name: "Responsive UI", core: true },
     ],
   },
   backend: {
@@ -33,14 +33,6 @@ export const skillChips: Record<string, { icon: string; skills: Skill[] }> = {
     skills: [
       { name: "AWS Cloud Practitioner", core: true }, { name: "ECS" }, { name: "ECR" }, { name: "S3" },
       { name: "DynamoDB" }, { name: "Cognito" },
-    ],
-  },
-  genai: {
-    icon: "✨",
-    skills: [
-      { name: "LLM APIs", core: true }, { name: "Prompt engineering", core: true },
-      { name: "Agentic workflows", core: true }, { name: "MCP", core: true }, { name: "Claude Code", core: true },
-      { name: "GitHub Copilot", core: true },
     ],
   },
   delivery: {
@@ -58,7 +50,8 @@ export const skillChips: Record<string, { icon: string; skills: Skill[] }> = {
     icon: "🛠️",
     skills: [
       { name: "Root-cause analysis", core: true }, { name: "Log analysis", core: true }, { name: "Linux" },
-      { name: "Bash" }, { name: "Windows" },
+      { name: "Bash" }, { name: "Windows" }, { name: "GitHub Copilot", core: true },
+      { name: "Claude Code", core: true },
     ],
   },
 };
@@ -70,7 +63,7 @@ export const learningChips: Record<string, { icon: string; items: string[] }> = 
   },
   integrations: {
     icon: "🧠",
-    items: ["Structured output (Zod)", "Tool calling", "Building MCP servers"],
+    items: ["LLM APIs (Claude, OpenAI)", "Prompt engineering", "Structured output (Zod)", "Tool calling", "MCP"],
   },
   casshy: {
     icon: "🏗️",
@@ -107,7 +100,7 @@ export const projectMeta: Record<string, ProjectMeta> = {
       { name: "Zod" }, { name: "LLM API" }, { name: "Docker", core: true },
     ],
     tags: ["backend"],
-    links: [{ key: "learning", href: "#skills" }],
+    links: [{ key: "code", href: "https://github.com/jdrcastel/incidenthub" }],
   },
   fragments: {
     stack: [

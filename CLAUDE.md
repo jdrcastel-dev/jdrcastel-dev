@@ -107,15 +107,14 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   Docker, CI/CD, SQL, root-cause/log analysis, GitHub Copilot, Claude Code, AWS Cloud Practitioner.
 - **Hands-on:** ECS, ECR, S3, DynamoDB, Cognito, GitHub Actions, Jest, Jenkins, Git, Linux, Bash, MongoDB,
   SQL Server, OAuth 2.0, Java (college), OOP.
-- **Learning (only in the Learning tab):** OpenAI Codex, structured output, tool calling, building MCP servers, Casshy's stack
+- **Learning (only in the Learning tab):** OpenAI Codex, LLM APIs, prompt engineering, agentic workflows, MCP, Casshy's stack
   (NestJS, Prisma, PostgreSQL, Turborepo, Better Auth, Zod, Rive, k3s), Spring Boot, Spring Data JPA, JUnit.
 - IncidentHub: TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker (support-incident API with SLAs and AI
   triage). Java and Spring Boot stay in Learning with no project attached.
-- **Never list:** Python, FastAPI, .NET, Kubernetes, Terraform, Lambda, IAM, VPC, SAML, LDAP, Power Apps.
+- **Never list:** Python, FastAPI, .NET, C++, Kubernetes, Terraform, Lambda, IAM, VPC, SAML, LDAP, Power Apps.
 - Ontario Government internship: internal web app with React, Next.js, TypeScript, Node.js, PostgreSQL and Jest (as on
   the resume; no LDAP, no Power Apps claims).
-- GenAI is a Skills group: LLM APIs, prompt engineering, agentic workflows, MCP, Claude Code, GitHub Copilot. C++ is
-  hands-on. OpenText products: LoadRunner Enterprise, ALM/Quality Center, UFT One. Seneca: May 2021 – Apr 2024.
+- OpenText products: LoadRunner Enterprise, ALM/Quality Center, UFT One. Seneca: May 2021 – Apr 2024.
 - Timer SaaS Team is a **web extension**: it shows under "All" (last) and under its own "Extensions" filter.
 - Casshy: Phase 0 done (vision, docs, ADRs), Phase 1 in progress, **no app code yet**. Never present it as live.
 
@@ -171,3 +170,6 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   resume's direction while the site keeps "Software Developer".
 - 2026-11: Juan aligned the site with his resume (C++, Ontario internship, UFT One, Seneca dates, GenAI as a skill
   group). Title stays "Software Developer" on the site; the resume update is postponed.
+- 2026-11: Resume v2 ("Software Developer | JavaScript · TypeScript · React · Node.js · AWS") is the source of truth.
+  C++ removed; GenAI/MCP back in Learning (Claude Code and Copilot stay Strong tools). No "Tier 2 → 3" anywhere: the
+  hero stat is "OpenText · Debugging enterprise SaaS in production". IncidentHub links to its code repo.

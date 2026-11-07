@@ -32,17 +32,17 @@ const en = {
     pauseMotion: "Pause animations",
     stats: [
       { value: "AWS", label: "Certified Cloud Practitioner" },
-      { value: "Tier 2 → 3", label: "Moving to Tier-3 support at OpenText" },
+      { value: "OpenText", label: "Debugging enterprise SaaS in production" },
       { value: "Casshy", label: "Building a gamified personal-finance app" },
-      { value: "GenAI · MCP", label: "Building with LLM APIs, agentic workflows and MCP" },
+      { value: "GenAI · MCP", label: "Learning LLM APIs, agentic workflows and MCP" },
     ],
   },
   about: {
     eyebrow: "About",
     title: "A bit about me",
     paragraphs: [
-      "I'm a software developer who likes building real products that ship and solve real problems. I work in TypeScript across the stack, from React and Next.js interfaces to Node.js and NestJS APIs on AWS. Now I'm bringing GenAI into what I build: LLM APIs, prompt engineering, agentic workflows with Claude Code and Codex, and the Model Context Protocol (MCP). Right now that's Casshy, my own personal-finance app, and IncidentHub.",
-      "I started coding at 17. Today I work in production support at OpenText, moving into Tier 3, so I know how real systems fail and how to fix them.",
+      "I'm a software developer who likes building real products that ship and solve real problems. I work in TypeScript across the stack, from React and Next.js interfaces to Node.js and NestJS APIs on AWS. Now I'm learning to bring GenAI into what I build: LLM APIs, prompt engineering, agentic workflows with Claude Code and Codex, and the Model Context Protocol (MCP). Right now that's Casshy, my own personal-finance app, and IncidentHub.",
+      "I started coding at 17. Today I work in production support at OpenText, so I know how real systems fail and how to fix them.",
       "Outside of tech, you'll find me playing soccer, at the gym, playing drums or gaming with friends.",
     ],
   },
@@ -137,7 +137,6 @@ const en = {
       frontend: "Languages & web",
       backend: "Backend",
       aws: "AWS",
-      genai: "Generative AI",
       delivery: "Delivery & quality",
       data: "Databases",
       support: "Production support & tools",
@@ -150,8 +149,8 @@ const en = {
         applying: "Casshy: I plan with ADRs and build with agents, reviewing each diff.",
       },
       integrations: {
-        title: "Going deeper with LLMs",
-        summary: "Taking LLM features further in real apps: structured output, tool calling and my own MCP servers, while keeping keys and costs under control.",
+        title: "Generative AI & MCP",
+        summary: "Bringing LLMs into real apps: prompt engineering, structured output, tool calling and MCP, while keeping keys and costs under control.",
         applying: "IncidentHub: adding AI triage that summarizes each ticket and suggests its priority.",
       },
       casshy: {
@@ -180,7 +179,7 @@ const en = {
         role: "Technical Support Specialist",
         org: "OpenText",
         bullets: [
-          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/Quality Center, UFT One), moving from Tier-2 into Tier-3 escalations.",
+          "Production support for global enterprise customers on OpenText SaaS (LoadRunner Enterprise, ALM/Quality Center, UFT One): investigate failures and coordinate technical escalations.",
           "Troubleshoot authentication (SSO, OAuth 2.0), integration and performance incidents using Linux/Windows, SQL, Jenkins and system logs, and analyze ticket data to find root causes and recurring issues.",
           "Partner with Operations, Engineering and R&D in an SLA-driven environment to resolve complex escalations.",
           "Built Timer SaaS Team, a web extension that returns agents to Available after breaks, with countdown, logs and timer recovery.",
@@ -199,8 +198,8 @@ const en = {
         role: "Application Developer",
         org: "Government of Ontario",
         bullets: [
-          "Built responsive front-end features for an internal web application with React, Next.js and TypeScript, turning UI/UX designs into production-ready, reusable components.",
-          "Integrated the UI with Node.js and PostgreSQL, and improved front-end performance and cross-browser behavior.",
+          "Built front-end features for an internal web application with React, Next.js and TypeScript, turning requirements and design specs into production-ready, reusable components.",
+          "Integrated the UI with Node.js services and a PostgreSQL database, and fixed bugs and cross-browser issues found by QA.",
           "Wrote Jest unit tests and documented components and workflows for the development team in an Agile setting.",
         ],
       },

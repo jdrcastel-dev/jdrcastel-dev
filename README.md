@@ -16,7 +16,7 @@
 
 - Software developer with strong **JavaScript and front-end** skills (React, Next.js, TypeScript), plus a **Node.js microservice on AWS**.
 - **AWS Certified Cloud Practitioner.** I built a containerized REST microservice on AWS with Docker and CI/CD to ECS.
-- Day job: **Technical Support Specialist at OpenText**, troubleshooting production incidents on enterprise SaaS platforms and moving from Tier 2 into **Tier 3**. I know how real systems fail.
+- Day job: **Technical Support Specialist at OpenText**, debugging production incidents on enterprise SaaS platforms. I know how real systems fail.
 - I build with **Claude Code** and **GitHub Copilot** every day.
 - 🌱 **Learning now:** **OpenAI Codex** and LLM integrations, which I'm applying in **IncidentHub** (in progress), a TypeScript/NestJS REST API for support incidents with SLA tracking and AI-assisted triage. Also learning Spring Boot, building on college Java.
 - 🪙 Building **Casshy**, a gamified personal-finance app where you take care of a living coin with good money habits.
