@@ -59,7 +59,7 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdcastel/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST API to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
+| **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST API to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
 | **IncidentHub** | REST API for support incidents with SLA breach detection and LLM-assisted ticket triage | TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker |
 | **Casshy** | Canadian personal-finance app that combines budgeting, financial education and a virtual companion; vision and architecture done | TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo |
 

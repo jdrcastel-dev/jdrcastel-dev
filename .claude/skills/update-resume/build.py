@@ -26,7 +26,7 @@ LINKS = {
     "rId6": "https://jdrcastel-dev.github.io/jdrcastel-dev/",
     "rId7": "https://www.linkedin.com/in/jdcastel/",
     "rId8": "https://github.com/jdrcastel-dev",
-    "rId11": "https://github.com/jdcastel/Microservice-fragments-Cloud-Computing",
+    "rId11": "https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing",
     "rId12": "https://github.com/jdcastel/Microservice-fragments-UI",
     "rId13": "https://github.com/jdrcastel/Timer-SaaS-Team",
 }

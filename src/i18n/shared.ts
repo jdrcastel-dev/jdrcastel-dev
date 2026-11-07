@@ -110,7 +110,7 @@ export const projectMeta: Record<string, ProjectMeta> = {
     ],
     tags: ["backend", "aws"],
     links: [
-      { key: "api", href: "https://github.com/jdcastel/Microservice-fragments-Cloud-Computing" },
+      { key: "api", href: "https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing" },
       { key: "ui", href: "https://github.com/jdcastel/Microservice-fragments-UI" },
     ],
   },
