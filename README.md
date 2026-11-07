@@ -1,6 +1,6 @@
 <h1 align="center">Hi, I'm Juan David Rodriguez Castelblanco 👋</h1>
 <p align="center">
-  <b>Software Developer</b> · JavaScript · React · Node.js · AWS · Java<br/>
+  <b>Software Developer</b> · JavaScript · TypeScript · React · Node.js · AWS<br/>
   📍 Ontario, Canada · 🇨🇴 Español / English
 </p>
 
@@ -14,11 +14,11 @@
 
 ### 🧑‍💻 About me
 
-- Software developer with strong **JavaScript and front-end** skills (React, Next.js, TypeScript), plus a **Node.js microservice on AWS**.
-- **AWS Certified Cloud Practitioner.** I built a containerized REST microservice on AWS with Docker and CI/CD to ECS.
+- Software developer focused on **React, TypeScript and Node.js**. I started with a React internship at the Government of Ontario.
+- **AWS Certified Cloud Practitioner.** I built a containerized REST API on AWS with Docker and CI/CD to ECS.
 - Day job: **Technical Support Specialist at OpenText**, debugging production incidents on enterprise SaaS platforms. I know how real systems fail.
-- I build with **Claude Code** and **GitHub Copilot** every day.
-- 🌱 **Learning now:** **OpenAI Codex** and LLM integrations, which I'm applying in **IncidentHub** (in progress), a TypeScript/NestJS REST API for support incidents with SLA tracking and AI-assisted triage. Also learning Spring Boot, building on college Java.
+- I build with **Claude Code** and **GitHub Copilot** every day, and built a browser extension the OpenText support team uses.
+- 🌱 **Learning now:** GenAI (LLM APIs, prompt engineering, agentic workflows, MCP) and **OpenAI Codex**, which I'm applying in **IncidentHub**, a TypeScript/NestJS REST API for support incidents with SLA tracking and AI-assisted triage. Also learning Spring Boot.
 - 🪙 Building **Casshy**, a gamified personal-finance app where you take care of a living coin with good money habits.
 - 🎓 Advanced Diploma, Computer Programming and Analysis — **Seneca Polytechnic** (President's Honour List).
 
@@ -33,9 +33,6 @@
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Redux](https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=redux&logoColor=white)
-
-**Java**
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 
 **AWS, delivery & data**
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
@@ -55,23 +52,24 @@
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![OpenAI Codex](https://img.shields.io/badge/OpenAI_Codex-412991?style=flat-square&logo=openai&logoColor=white)
-![LLM integrations](https://img.shields.io/badge/LLM_integrations-6B7280?style=flat-square)
+![LLM APIs](https://img.shields.io/badge/LLM_APIs-6B7280?style=flat-square)
+![MCP](https://img.shields.io/badge/MCP-6B7280?style=flat-square)
 
 ### 📁 Featured projects
 
 | Project | What it does | Stack |
 |---|---|---|
-| **Casshy** *(in progress)* | Gamified personal-finance web app for Canada: accounts, budgets, goals and investments, with Casshy, a living coin that evolves with fair XP from good money habits | TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo, Rive, Docker |
-| **IncidentHub** *(in progress)* | REST API for support incidents with SLA breach detection and LLM-based ticket triage | TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker |
-| **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdcastel/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST microservice to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
+| **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdcastel/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST API to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
+| **IncidentHub** | REST API for support incidents with SLA breach detection and LLM-assisted ticket triage | TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker |
+| **Casshy** | Canadian personal-finance app that combines budgeting, financial education and a virtual companion; vision and architecture done | TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo |
 
-**Web extensions:** **Timer SaaS Team**: returns agents to Available after breaks in the OpenText SaaS Unified Tool, with countdown, logs and timer recovery (JavaScript, Manifest V3).
+**Web extensions:** **Timer SaaS Team** (built at OpenText): returns agents to Available after breaks in the OpenText SaaS Unified Tool, with countdown, logs and timer recovery (JavaScript, Manifest V3).
 
 ### 💼 Experience
 
-- **Technical Support Specialist — OpenText** · Sep 2025 – Present
+- **Technical Support Specialist — OpenText** · Sep 2025 – Present — debugging production incidents on enterprise SaaS platforms
 - **Application Developer (Internship) — Government of Ontario** · Sep 2022 – Apr 2023 — internal web page in React
-- **Volunteer — Hispanotech** · organized technical workshops and networking sessions for Latin American tech professionals
+- **Technical Support Engineer (Volunteer) — Hispanotech** · 2022 – 2023 · organized technical workshops and networking sessions for Latin American tech professionals
 
 ### 🎧 Outside of code
 
