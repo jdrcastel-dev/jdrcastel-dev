@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://jdrcastel.github.io/jdrcastel/"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://jdrcastel-cpu.github.io/jdrcastel-cpu/"><img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/jdcastel/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:jdrcastel@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
@@ -65,7 +65,7 @@
 | **IncidentHub** *(in progress)* | REST API for support incidents with SLA breach detection and LLM-based ticket triage | TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker |
 | **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdcastel/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST microservice to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
 
-**Web extensions:** [Timer SaaS Team](https://github.com/jdrcastel/Timer-SaaS-Team): returns agents to Available after breaks in the OpenText SaaS Unified Tool, with countdown, logs and timer recovery (JavaScript, Manifest V3).
+**Web extensions:** **Timer SaaS Team**: returns agents to Available after breaks in the OpenText SaaS Unified Tool, with countdown, logs and timer recovery (JavaScript, Manifest V3).
 
 ### 💼 Experience
 

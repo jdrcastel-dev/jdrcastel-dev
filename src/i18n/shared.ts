@@ -5,7 +5,7 @@ export const person = {
   short: "Juan Castelblanco",
   email: "jdrcastel@gmail.com",
   linkedin: "https://www.linkedin.com/in/jdcastel/",
-  github: "https://github.com/jdrcastel",
+  github: "https://github.com/jdrcastel-cpu",
   resume: "Resume_Juan_Castelblanco.pdf",
 };
 
@@ -100,7 +100,7 @@ export const projectMeta: Record<string, ProjectMeta> = {
       { name: "Zod" }, { name: "LLM API" }, { name: "Docker", core: true },
     ],
     tags: ["backend"],
-    links: [{ key: "code", href: "https://github.com/jdrcastel/incidenthub" }],
+    links: [],
   },
   fragments: {
     stack: [
@@ -121,6 +121,6 @@ export const projectMeta: Record<string, ProjectMeta> = {
       { name: "chrome.alarms / storage" },
     ],
     tags: ["web"],
-    links: [{ key: "code", href: "https://github.com/jdrcastel/Timer-SaaS-Team" }],
+    links: [],
   },
 };

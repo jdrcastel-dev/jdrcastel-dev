@@ -23,7 +23,7 @@ conventions are the standard you audit against.
      `aria-expanded`, tabs), color contrast in light and dark, and `prefers-reduced-motion`.
 4. **SEO:**
    - `<html lang="en">`, title/description, canonical.
-   - Open Graph image reachable and every internal URL respecting the `/jdrcastel` base path.
+   - Open Graph image reachable and every internal URL respecting the `/jdrcastel-cpu` base path.
 5. **Code quality:**
    - TypeScript types (no `any`), no dead code or unused imports, consistent use of `cn()`, `buttonVariants()` and
      tokens, and no hard-coded user-facing text outside `src/i18n/`.
