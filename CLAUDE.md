@@ -179,3 +179,5 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
 - 2026-11: New GitHub account `jdrcastel-dev` (the old `jdrcastel` was suspended). Repo `jdrcastel-dev/jdrcastel-dev`,
   site at https://jdrcastel-dev.github.io/jdrcastel-dev/. IncidentHub and Timer code links removed until Juan
   re-uploads those repos.
+- 2026-11: The site opens in dark mode by default (ignores the system setting); the toggle still switches to light and
+  remembers the choice.

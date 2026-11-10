@@ -17,7 +17,7 @@ const ogImage = abs(assetUrl("og.png"));
 ---
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,21 +33,20 @@ const ogImage = abs(assetUrl("og.png"));
     <meta property="og:locale" content="en_CA" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <meta name="theme-color" content="#fcfcfc" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href={assetUrl("favicon.svg")} />
 
     <Font cssVariable="--font-geist" preload />
     <Font cssVariable="--font-geist-mono" preload />
 
     <script is:inline>
-      // Apply the saved or system theme before first paint to avoid a flash.
+      // Dark by default; a saved choice from the toggle wins. Applied before first paint to avoid a flash.
       (() => {
         const root = document.documentElement;
         root.classList.remove("no-js");
         let saved = null;
         try { saved = localStorage.getItem("theme"); } catch {}
-        const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        const dark = saved !== "light";
         root.classList.toggle("dark", dark);
         try { if (localStorage.getItem("motion") === "paused") root.dataset.motion = "paused"; } catch {}
       })();
