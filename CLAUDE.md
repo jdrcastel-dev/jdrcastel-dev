@@ -23,8 +23,8 @@ This repo is also Juan's GitHub profile repo: `README.md` is his profile page, n
 ## Stack
 
 - Astro 7 (static output, one page)
-- React 19 islands only where there is interaction (`client:visible`): projects (filters, "Learn more", Fragments
-  diagram) and skills/learning tabs. Experience "More details" is a native `<details>` (no JS).
+- React 19 islands only where there is interaction (`client:visible`): projects (filters, "How it works"
+  diagrams) and skills/learning tabs. Experience "More details" is a native `<details>` (no JS).
 - Animation libraries: **Motion** (`motion/react`, React islands only, `LazyMotion` + `m` with `domMax` loaded on
   demand from `src/lib/motion-features.ts`), **Lenis** (smooth scroll, `Layout.astro`), **simple-icons** (build time
   only: logos become one cached sprite at `/tech-icons.svg`). Magic UI patterns are adapted by hand (see below).
@@ -84,8 +84,8 @@ folds it into the `animation` shorthand otherwise and browsers drop it.
 - **Section titles:** slide up from a mask when the header reveals (`.title-mask` in `Section.astro`).
 - **About:** words light up line by line as you scroll (`.read-word`, CSS view timelines; static where unsupported).
 - **Projects:** filter pill slides between filters (Motion `layoutId`), cards fade/reflow (`AnimatePresence`,
-  `layout="position"`), border beam on the featured Casshy card, Fragments architecture diagram with light pulses
-  (pulses pause off screen).
+  `layout="position"`), border beam on the featured Kasshy card, "How it works" architecture diagrams with light
+  pulses for Kasshy, Fragments and IncidentHub (`ArchitectureDiagram.tsx`; pulses pause off screen).
 - **Card spotlight:** blue glow that follows the mouse on every card (projects, hero stats, skills, learning, contact).
 - **Experience timeline:** line fills and dots light up with scroll.
 - **Theme switch:** circle reveal from the toggle (View Transitions).
@@ -116,7 +116,11 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   Node.js, PostgreSQL, Jest, LDAP or Power Apps claims: Juan found those exaggerated).
 - OpenText products: LoadRunner Enterprise, ALM/Quality Center, UFT One. Seneca: May 2021 – Apr 2024.
 - Timer SaaS Team is a **web extension**: it shows under "All" (last) and under its own "Extensions" filter.
-- Casshy: Phase 0 done (vision, docs, ADRs), Phase 1 in progress, **no app code yet**. Never present it as live.
+- Kasshy (with K; formerly "Casshy"): personal finance app for newcomers and young people in Canada. Per Juan's Nov 27
+  resume it imports bank transactions, sorts spending by category and shows what's left of the monthly budget
+  (Next.js web, NestJS API, PostgreSQL). No public repo or demo link yet.
+- **Source of truth:** Juan's resume PDF in `public/` (Nov 27). Site text follows it; the site adds the Learning tab,
+  the hero cards Juan chose, Timer SaaS Team and the "Tools & AI" skills (Claude Code, Copilot, Linux).
 
 ## Decision log
 
@@ -185,3 +189,8 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   (with K) is a built personal-finance app (bank import, categories, monthly budget), Fragments and IncidentHub as on
   the resume, skills in the resume's 4 groups, OpenText 228 cases, Ontario Rapid Prototype Design Unit, Hispanotech in
   Correo Canadiense. Removed: Learning tab, GenAI stat, Timer, Platzi, project filters, status badges, roadmap, Motion.
+- 2026-11: (Partly replaced) Juan said the resume-only version felt too thin. He wants the hero cards exactly as before
+  (AWS, OpenText, Kasshy, GenAI · MCP) and the logo marquee kept. Learning tab, project filters and Timer are back.
+  "Next level" round: "How it works" diagrams for Kasshy and IncidentHub (same pulse style as Fragments), Highlights
+  cards in Experience (228 cases, Very Good rating, Correo Canadiense, Honour List), schema.org Person JSON-LD.
+  No status badges or roadmap on projects.

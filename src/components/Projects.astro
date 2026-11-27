@@ -16,6 +16,14 @@ const projects: Project[] = t.projects.items.map((item) => ({ ...item, ...projec
   <ProjectsGrid
     client:visible
     projects={projects}
-    labels={{ stackLabel: t.projects.stackLabel, links: t.projects.links, diagram: t.projects.diagram }}
+    labels={{
+      title: t.projects.title,
+      filters: t.projects.filters,
+      stackLabel: t.projects.stackLabel,
+      whatTitle: t.projects.whatTitle,
+      howTitle: t.projects.howTitle,
+      links: t.projects.links,
+      diagrams: t.projects.diagrams,
+    }}
   />
 </Section>

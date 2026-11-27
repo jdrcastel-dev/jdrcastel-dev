@@ -1,55 +1,86 @@
-import { useEffect, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
-import { Archive, Database, KeyRound, Monitor, Server } from "lucide-react";
+import { useEffect, useRef, useState, type CSSProperties, type ComponentType } from "react";
+import { Archive, Database, FileSpreadsheet, KeyRound, Monitor, Server, Sparkles, Ticket } from "lucide-react";
+import { cn } from "@/lib/utils";
 import type { Content } from "@/i18n";
 
-type Labels = Content["projects"]["diagram"];
-type Ref = RefObject<HTMLSpanElement | null>;
+type Diagrams = Content["projects"]["diagrams"];
+export type DiagramId = keyof Diagrams;
+type NodeSpec = { id: string; icon: ComponentType };
+type Spec = { columns: NodeSpec[][]; edges: [from: string, to: string, delay: number][] };
 
-function Node({ nodeRef, icon, label, caption, row }: { nodeRef: Ref; icon: ReactNode; label: string; caption?: string; row?: boolean }) {
-  return (
-    <div className={row ? "flex items-center gap-2" : "flex flex-col items-center gap-1.5"}>
-      <span ref={nodeRef} className="relative grid size-9 place-items-center rounded-lg border bg-card text-foreground shadow-xs [&_svg]:size-4">
-        {icon}
-      </span>
-      <span className={row ? "text-[11px] font-medium" : "text-center text-[11px] leading-tight font-medium"}>
-        {label}
-        {caption && <span className="block font-mono text-[10px] font-normal text-muted-foreground">{caption}</span>}
-      </span>
-    </div>
-  );
-}
+// Columns run left to right; a column with several nodes stacks them as rows (icon + label)
+const specs: Record<DiagramId, Spec> = {
+  kasshy: {
+    columns: [
+      [{ id: "bank", icon: FileSpreadsheet }],
+      [{ id: "web", icon: Monitor }],
+      [{ id: "api", icon: Server }],
+      [{ id: "db", icon: Database }],
+    ],
+    edges: [
+      ["bank", "web", 0],
+      ["web", "api", 0.6],
+      ["api", "db", 1.2],
+    ],
+  },
+  fragments: {
+    columns: [
+      [{ id: "ui", icon: Monitor }],
+      [{ id: "api", icon: Server }],
+      [
+        { id: "auth", icon: KeyRound },
+        { id: "data", icon: Archive },
+        { id: "meta", icon: Database },
+      ],
+    ],
+    edges: [
+      ["ui", "api", 0],
+      ["api", "auth", 0.9],
+      ["api", "data", 1],
+      ["api", "meta", 1.1],
+    ],
+  },
+  incidenthub: {
+    columns: [
+      [{ id: "ticket", icon: Ticket }],
+      [{ id: "api", icon: Server }],
+      [
+        { id: "db", icon: Database },
+        { id: "llm", icon: Sparkles },
+      ],
+    ],
+    edges: [
+      ["ticket", "api", 0],
+      ["api", "db", 0.9],
+      ["api", "llm", 1.1],
+    ],
+  },
+};
 
 /**
- * Fragments architecture with light pulses traveling along each connection.
+ * A project's architecture with light pulses traveling along each connection.
  * The path math is adapted from Magic UI's AnimatedBeam (MIT); the pulse is a CSS animation (.beam-pulse).
  */
-export default function ArchitectureDiagram({ labels }: { labels: Labels }) {
-  const box = useRef<HTMLDivElement>(null);
-  const ui: Ref = useRef(null);
-  const api: Ref = useRef(null);
-  const auth: Ref = useRef(null);
-  const data: Ref = useRef(null);
-  const meta: Ref = useRef(null);
+export default function ArchitectureDiagram({ id, labels }: { id: DiagramId; labels: Diagrams[DiagramId] }) {
+  const spec = specs[id];
+  const captions: Record<string, string | undefined> = labels.captions;
+  const names: Record<string, string> = labels.nodes;
+  const box = useRef<HTMLElement>(null);
+  const nodes = useRef(new Map<string, HTMLSpanElement>());
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [paths, setPaths] = useState<{ d: string; delay: number }[]>([]);
   // Pulses repaint every frame, so they only run while the diagram is on screen
   const [onScreen, setOnScreen] = useState(false);
 
   useEffect(() => {
-    const edges: [Ref, Ref, number][] = [
-      [ui, api, 0],
-      [api, auth, 0.9],
-      [api, data, 1],
-      [api, meta, 1.1],
-    ];
     const update = () => {
       const c = box.current?.getBoundingClientRect();
       if (!c) return;
       setSize({ w: c.width, h: c.height });
       setPaths(
-        edges.flatMap(([from, to, delay]) => {
-          const a = from.current?.getBoundingClientRect();
-          const b = to.current?.getBoundingClientRect();
+        spec.edges.flatMap(([from, to, delay]) => {
+          const a = nodes.current.get(from)?.getBoundingClientRect();
+          const b = nodes.current.get(to)?.getBoundingClientRect();
           if (!a || !b) return [];
           // From the right side of one node to the left side of the next, as a smooth S-curve
           const [x1, y1] = [a.right - c.left, a.top + a.height / 2 - c.top];
@@ -70,7 +101,7 @@ export default function ArchitectureDiagram({ labels }: { labels: Labels }) {
       resize.disconnect();
       visibility.disconnect();
     };
-  }, []);
+  }, [spec]);
 
   return (
     <figure
@@ -78,7 +109,7 @@ export default function ArchitectureDiagram({ labels }: { labels: Labels }) {
       role="img"
       aria-label={labels.alt}
       data-active={onScreen || undefined}
-      className="relative flex items-center justify-between gap-6 rounded-lg border bg-muted/40 px-4 py-4"
+      className="relative flex items-center justify-between gap-3 rounded-lg border bg-muted/40 px-4 py-4"
     >
       <svg className="pointer-events-none absolute inset-0" width={size.w} height={size.h} aria-hidden="true">
         {paths.map(({ d, delay }) => (
@@ -88,13 +119,31 @@ export default function ArchitectureDiagram({ labels }: { labels: Labels }) {
           </g>
         ))}
       </svg>
-      <Node nodeRef={ui} icon={<Monitor />} label={labels.ui} />
-      <Node nodeRef={api} icon={<Server />} label={labels.api} caption="Docker · ECS" />
-      <div className="flex flex-col gap-2.5">
-        <Node row nodeRef={auth} icon={<KeyRound />} label="Cognito" />
-        <Node row nodeRef={data} icon={<Archive />} label="S3" />
-        <Node row nodeRef={meta} icon={<Database />} label="DynamoDB" />
-      </div>
+      {spec.columns.map((column) => {
+        const row = column.length > 1;
+        return (
+          <div key={column[0].id} className={row ? "flex flex-col gap-2.5" : undefined}>
+            {column.map(({ id: nodeId, icon: Icon }) => (
+              <div key={nodeId} className={row ? "flex items-center gap-2" : "flex max-w-20 flex-col items-center gap-1.5"}>
+                <span
+                  ref={(el) => {
+                    if (el) nodes.current.set(nodeId, el);
+                  }}
+                  className="relative grid size-9 shrink-0 place-items-center rounded-lg border bg-card text-foreground shadow-xs [&_svg]:size-4"
+                >
+                  <Icon />
+                </span>
+                <span className={cn("text-[11px] leading-tight font-medium", !row && "text-center")}>
+                  {names[nodeId]}
+                  {captions[nodeId] && (
+                    <span className="block font-mono text-[10px] font-normal text-muted-foreground">{captions[nodeId]}</span>
+                  )}
+                </span>
+              </div>
+            ))}
+          </div>
+        );
+      })}
     </figure>
   );
 }
