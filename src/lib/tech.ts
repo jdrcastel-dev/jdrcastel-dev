@@ -1,14 +1,15 @@
 // Logos for the hero marquee (build time only: never import this from a React island).
-// Only Juan's strongest technologies ("Strong" in CLAUDE.md "Content truth").
+// The technologies on Juan's resume.
 import {
   siCss,
   siDocker,
   siExpress,
-  siGithubcopilot,
   siHtml5,
+  siNestjs,
   siJavascript,
   siNextdotjs,
   siNodedotjs,
+  siPostgresql,
   siReact,
   siRedux,
   siTypescript,
@@ -31,9 +32,10 @@ export const techRows: Tech[][] = [
   [
     { label: "Node.js", icon: siNodedotjs },
     { label: "Express", icon: siExpress },
+    { label: "NestJS", icon: siNestjs },
+    { label: "PostgreSQL", icon: siPostgresql },
     { label: "Docker", icon: siDocker },
     { label: "AWS" },
-    { label: "GitHub Copilot", icon: siGithubcopilot },
   ],
 ];
 

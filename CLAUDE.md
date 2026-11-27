@@ -181,3 +181,7 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   re-uploads those repos.
 - 2026-11: The site opens in dark mode by default (ignores the system setting); the toggle still switches to light and
   remembers the choice.
+- 2026-11: Juan's own resume (public/Resume_Juan_Castelblanco.pdf, Nov 27) is the source of truth for the site: Kasshy
+  (with K) is a built personal-finance app (bank import, categories, monthly budget), Fragments and IncidentHub as on
+  the resume, skills in the resume's 4 groups, OpenText 228 cases, Ontario Rapid Prototype Design Unit, Hispanotech in
+  Correo Canadiense. Removed: Learning tab, GenAI stat, Timer, Platzi, project filters, status badges, roadmap, Motion.
