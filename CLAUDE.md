@@ -190,7 +190,8 @@ Magic UI (`magicui.design`) is blocked too: read components from GitHub (`magicu
   the resume, skills in the resume's 4 groups, OpenText 228 cases, Ontario Rapid Prototype Design Unit, Hispanotech in
   Correo Canadiense. Removed: Learning tab, GenAI stat, Timer, Platzi, project filters, status badges, roadmap, Motion.
 - 2026-11: (Partly replaced) Juan said the resume-only version felt too thin. He wants the hero cards exactly as before
-  (AWS, OpenText, Kasshy, GenAI · MCP) and the logo marquee kept. Learning tab, project filters and Timer are back.
+  (AWS, OpenText, Kasshy, GenAI · MCP) and the logo marquee kept. The Kasshy card reads "Personal finance app for
+  newcomers in Canada" (no longer gamified). Learning tab, project filters and Timer are back.
   "Next level" round: "How it works" diagrams for Kasshy and IncidentHub (same pulse style as Fragments), Highlights
   cards in Experience (228 cases, Very Good rating, Correo Canadiense, Honour List), schema.org Person JSON-LD.
   No status badges or roadmap on projects.

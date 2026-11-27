@@ -31,7 +31,7 @@ const en = {
     stats: [
       { value: "AWS", label: "Certified Cloud Practitioner" },
       { value: "OpenText", label: "Debugging enterprise SaaS in production" },
-      { value: "Kasshy", label: "Building a gamified personal-finance app" },
+      { value: "Kasshy", label: "Personal finance app for newcomers in Canada" },
       { value: "GenAI · MCP", label: "Learning LLM APIs, agentic workflows and MCP" },
     ],
   },
