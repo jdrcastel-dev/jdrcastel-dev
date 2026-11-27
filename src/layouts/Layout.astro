@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import "lenis/dist/lenis.css";
 import { Font } from "astro:assets";
 import { assetUrl, homeUrl } from "@/i18n";
+import { person } from "@/i18n/shared";
 
 interface Props {
   title: string;
@@ -14,6 +15,21 @@ const { title, description, skipLabel } = Astro.props;
 const abs = (path: string) => new URL(path, Astro.site).href;
 const canonical = abs(homeUrl());
 const ogImage = abs(assetUrl("og.png"));
+
+// Structured data so search engines know who the site is about (schema.org Person)
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: person.name,
+  jobTitle: "Software Developer",
+  url: canonical,
+  email: `mailto:${person.email}`,
+  sameAs: [person.linkedin, person.github],
+  worksFor: { "@type": "Organization", name: "OpenText" },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Seneca Polytechnic" },
+  address: { "@type": "PostalAddress", addressCountry: "CA" },
+  knowsAbout: ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "NestJS", "PostgreSQL", "AWS", "Docker"],
+});
 ---
 
 <!doctype html>
@@ -35,6 +51,7 @@ const ogImage = abs(assetUrl("og.png"));
 
     <meta name="theme-color" content="#0a0a0a" />
     <link rel="icon" type="image/svg+xml" href={assetUrl("favicon.svg")} />
+    <script type="application/ld+json" set:html={jsonLd} />
 
     <Font cssVariable="--font-geist" preload />
     <Font cssVariable="--font-geist-mono" preload />

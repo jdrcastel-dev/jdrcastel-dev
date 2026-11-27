@@ -14,12 +14,12 @@
 
 ### 🧑‍💻 About me
 
-- Software developer focused on **React, TypeScript and Node.js**. I started with a React internship at the Government of Ontario.
+- Software developer focused on **React, TypeScript and Node.js**, with a background in production support. Looking for a role where I can build useful web applications across the stack.
 - **AWS Certified Cloud Practitioner.** I built a containerized REST API on AWS with Docker and CI/CD to ECS.
-- Day job: **Technical Support Specialist at OpenText**, debugging production incidents on enterprise SaaS platforms. I know how real systems fail.
+- Day job: **Technical Support Specialist at OpenText**, resolving production incidents for enterprise customers (228 cases closed in six months). I know how real systems fail.
 - I build with **Claude Code** and **GitHub Copilot** every day, and built a browser extension the OpenText support team uses.
-- 🌱 **Learning now:** GenAI (LLM APIs, prompt engineering, agentic workflows, MCP) and **OpenAI Codex**, which I'm applying in **IncidentHub**, a TypeScript/NestJS REST API for support incidents with SLA tracking and AI-assisted triage. Also learning Spring Boot.
-- 🪙 Building **Casshy**, a gamified personal-finance app where you take care of a living coin with good money habits.
+- 🌱 **Learning now:** GenAI (LLM APIs, prompt engineering, agentic workflows, MCP) and **OpenAI Codex**, which I'm applying in **IncidentHub**'s AI-assisted ticket triage. Also learning Spring Boot.
+- 💸 Building **Kasshy**, a personal finance app for newcomers and young people in Canada.
 - 🎓 Advanced Diploma, Computer Programming and Analysis — **Seneca Polytechnic** (President's Honour List).
 
 ### 🛠️ Tech stack
@@ -59,17 +59,17 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| **Fragments — Cloud REST API on AWS** · [API](https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdcastel/Microservice-fragments-UI) | REST API to store and convert text and image fragments; Cognito auth, S3 + DynamoDB, CI/CD to ECS | Node.js, Express, AWS (Cognito, S3, DynamoDB, ECR, ECS), Docker, Jest |
-| **IncidentHub** | REST API for support incidents with SLA breach detection and LLM-assisted ticket triage | TypeScript, NestJS, PostgreSQL, Prisma, Zod, LLM API, Docker |
-| **Casshy** | Canadian personal-finance app that combines budgeting, financial education and a virtual companion; vision and architecture done | TypeScript, Next.js, NestJS, PostgreSQL, Prisma, Turborepo |
+| **Kasshy** | Personal finance app for newcomers and young people in Canada: import bank transactions, sort spending by category and see how much is left in the monthly budget | Next.js, TypeScript, NestJS, PostgreSQL, Prisma |
+| **Fragments** · [API](https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing) · [UI](https://github.com/jdrcastel-dev/Microservice-fragments-UI) | Web interface and API for storing and converting text and images; Cognito sign-in, tests in GitHub Actions, tagged releases deploy to Amazon ECS | Node.js, Express, AWS, Docker |
+| **IncidentHub** | Ticket API that flags missed response deadlines, with an AI-assisted triage step that suggests a priority for an agent to review | TypeScript, NestJS, PostgreSQL, Prisma |
 
 **Web extensions:** **Timer SaaS Team** (built at OpenText): returns agents to Available after breaks in the OpenText SaaS Unified Tool, with countdown, logs and timer recovery (JavaScript, Manifest V3).
 
 ### 💼 Experience
 
-- **Technical Support Specialist — OpenText** · Sep 2025 – Present — debugging production incidents on enterprise SaaS platforms
-- **Application Developer (Internship) — Government of Ontario** · Sep 2022 – Apr 2023 — internal web page in React
-- **Technical Support Engineer (Volunteer) — Hispanotech** · 2022 – 2023 · organized technical workshops and networking sessions for Latin American tech professionals
+- **Technical Support Specialist — OpenText** · Sep 2025 – Present — production incidents on LoadRunner and ALM; 228 cases closed in six months
+- **Application Developer (Internship) — Government of Ontario** · Sep 2022 – Apr 2023 — prototypes in the Rapid Prototype Design Unit; "Very Good" work-term rating
+- **Technical Support Engineer (Volunteer) — Hispanotech** · 2022 – 2023 — workshops and networking events for Latin American tech professionals; featured by Correo Canadiense
 
 ### 🎧 Outside of code
 

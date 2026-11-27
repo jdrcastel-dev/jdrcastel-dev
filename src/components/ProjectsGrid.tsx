@@ -1,121 +1,93 @@
 import { useState } from "react";
 import { AnimatePresence, LazyMotion, MotionConfig } from "motion/react";
 import * as m from "motion/react-m";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import type { Content, ProjectStatus, RoadmapStatus } from "@/i18n";
+import type { Content } from "@/i18n";
 import type { ProjectMeta } from "@/i18n/shared";
-import ArchitectureDiagram from "./ArchitectureDiagram";
+import ArchitectureDiagram, { type DiagramId } from "./ArchitectureDiagram";
 
 type ProjectsContent = Content["projects"];
-export type Labels = Pick<ProjectsContent, "title" | "filters" | "status" | "learnMore" | "stackLabel" | "links" | "diagram" | "featured">;
+export type Labels = Pick<
+  ProjectsContent,
+  "title" | "filters" | "stackLabel" | "whatTitle" | "howTitle" | "links" | "diagrams"
+>;
 type Filter = keyof Labels["filters"];
 export type Project = ProjectsContent["items"][number] & ProjectMeta;
-
-const statusStyle: Record<ProjectStatus, string> = {
-  progress: "bg-warning/15 text-warning",
-  use: "bg-success/15 text-success",
-  shipped: "bg-success/15 text-success",
-};
-
-const roadmapDot: Record<RoadmapStatus, string> = {
-  done: "bg-success",
-  inProgress: "bg-warning ring-4 ring-warning/20 motion-safe:animate-pulse",
-  planned: "bg-muted-foreground/30",
-};
-
-/** The featured project shows its details open: what it does and the roadmap, side by side on wide screens. */
-function FeaturedDetails({ p, labels }: { p: Project; labels: Labels }) {
-  const f = labels.featured;
-  return (
-    <div className="grid gap-6 border-t pt-4 md:grid-cols-2">
-      <div>
-        <h4 className="mb-2 text-xs font-medium tracking-wide text-brand uppercase">{f.featuresTitle}</h4>
-        <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
-          {p.bullets.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h4 className="mb-2 text-xs font-medium tracking-wide text-brand uppercase">{f.roadmapTitle}</h4>
-        <ol className="space-y-2.5">
-          {f.roadmap.map((r) => (
-            <li key={r.title} className="flex items-start gap-3 text-sm">
-              <span className={cn("mt-1.5 size-2.5 shrink-0 rounded-full", roadmapDot[r.status])} aria-hidden="true" />
-              <span>
-                {r.title} <span className="text-xs text-muted-foreground">· {f.states[r.status]}</span>
-              </span>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </div>
-  );
-}
 
 // Motion's layout features download after the first render
 const loadFeatures = () => import("@/lib/motion-features").then((mod) => mod.default);
 const ease = [0.2, 0.7, 0.2, 1] as const;
 
+const SubTitle = ({ children }: { children: string }) => (
+  <h4 className="mb-2 text-xs font-medium tracking-wide text-brand uppercase">{children}</h4>
+);
+
+function Bullets({ items }: { items: string[] }) {
+  return (
+    <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
+      {items.map((b) => (
+        <li key={b}>{b}</li>
+      ))}
+    </ul>
+  );
+}
+
 function ProjectCard({ p, labels }: { p: Project; labels: Labels }) {
+  const diagramId = p.id in labels.diagrams ? (p.id as DiagramId) : undefined;
+  const diagram = diagramId && <ArchitectureDiagram id={diagramId} labels={labels.diagrams[diagramId]} />;
+
   return (
     <Card className={cn("lift spotlight relative h-full", p.featured && "border-brand/40")}>
       {p.featured && <span className="beam" aria-hidden="true" />}
       <CardHeader>
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="text-lg leading-snug font-semibold">{p.title}</h3>
-          <Badge variant="secondary" className={cn("shrink-0", statusStyle[p.status])}>
-            {labels.status[p.status]}
-          </Badge>
-        </div>
+        <h3 className="text-lg leading-snug font-semibold">{p.title}</h3>
         <p className="text-sm text-pretty text-muted-foreground">{p.summary}</p>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col gap-3">
-        {p.id === "fragments" && <ArchitectureDiagram labels={labels.diagram} />}
-        <ul className="flex flex-wrap gap-1.5" aria-label={labels.stackLabel}>
+      <CardContent className="flex flex-1 flex-col gap-4">
+        {p.featured ? (
+          // The featured project shows what it does and how it works side by side on wide screens
+          <div className="grid gap-6 md:grid-cols-2">
+            <div>
+              <SubTitle>{labels.whatTitle}</SubTitle>
+              <Bullets items={p.bullets} />
+            </div>
+            {diagram && (
+              <div>
+                <SubTitle>{labels.howTitle}</SubTitle>
+                {diagram}
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            {diagram}
+            <Bullets items={p.bullets} />
+          </>
+        )}
+        <ul className="mt-auto flex flex-wrap gap-1.5 pt-1" aria-label={labels.stackLabel}>
           {p.stack.map((s) => (
             <li key={s.name}>
-              <Badge variant={s.core ? "default" : "outline"} className="font-mono font-normal">
+              <Badge variant="outline" className="font-mono font-normal">
                 {s.name}
               </Badge>
             </li>
           ))}
         </ul>
-        {p.featured ? (
-          <FeaturedDetails p={p} labels={labels} />
-        ) : (
-          <Accordion type="single" collapsible className="mt-auto">
-            <AccordionItem value="more" className="border-t border-b-0">
-              <AccordionTrigger className="py-3">{labels.learnMore}</AccordionTrigger>
-              <AccordionContent>
-                <ul className="list-disc space-y-1.5 pl-5 text-muted-foreground">
-                  {p.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        )}
       </CardContent>
       {p.links.length > 0 && (
-        <CardFooter className="flex flex-wrap gap-2">
-          {p.links.map((l) => {
-            const external = l.href.startsWith("http");
-            return (
-              <Button key={l.key} variant="link" size="sm" className="h-auto px-0" asChild>
-                <a href={l.href} {...(external ? { target: "_blank", rel: "noopener" } : {})}>
-                  {labels.links[l.key]}
-                  {external ? <ArrowUpRight aria-hidden="true" /> : <ArrowRight aria-hidden="true" />}
-                </a>
-              </Button>
-            );
-          })}
+        <CardFooter className="flex flex-wrap gap-4">
+          {p.links.map((l) => (
+            <Button key={l.key} variant="link" size="sm" className="h-auto px-0" asChild>
+              <a href={l.href} target="_blank" rel="noopener">
+                {labels.links[l.key]}
+                <ArrowUpRight aria-hidden="true" />
+              </a>
+            </Button>
+          ))}
         </CardFooter>
       )}
     </Card>

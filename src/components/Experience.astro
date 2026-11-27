@@ -2,6 +2,7 @@
 import { ChevronDown } from "lucide-react";
 import Section from "./Section.astro";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import type { Content, ExperienceKind } from "@/i18n";
 
 interface Props {
@@ -20,6 +21,19 @@ const kindStyle: Record<ExperienceKind, string> = {
 ---
 
 <Section id="experience" eyebrow={e.eyebrow} title={e.title} lead={e.lead}>
+  <h3 class="sr-only">{e.highlightsLabel}</h3>
+  <ul class="mb-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
+    {e.highlights.map((h, i) => (
+      <li data-reveal style={`--reveal-delay:${i * 60}ms`}>
+        <Card className="lift spotlight relative h-full gap-1 py-4">
+          <CardContent className="px-4">
+            <p class="text-xl font-semibold tracking-tight text-brand">{h.value}</p>
+            <p class="text-sm text-muted-foreground">{h.label}</p>
+          </CardContent>
+        </Card>
+      </li>
+    ))}
+  </ul>
   <ol class="relative flex max-w-3xl flex-col gap-8 border-l pl-6">
     <span class="timeline-fill absolute top-0 -left-px h-full w-px bg-brand" aria-hidden="true"></span>
     {e.items.map((x, i) => {

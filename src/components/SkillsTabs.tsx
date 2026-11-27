@@ -9,7 +9,7 @@ export type LearningCard = { id: string; icon: string; title: string; summary: s
 type Props = {
   groups: SkillGroup[];
   learning: LearningCard[];
-  labels: { tabSkills: string; tabLearning: string; legendCore: string; legendUsed: string; applyingLabel: string };
+  labels: { tabSkills: string; tabLearning: string; applyingLabel: string; spokenLabel: string; spoken: string };
 };
 
 const Icon = ({ children }: { children: string }) => (
@@ -26,18 +26,13 @@ export default function SkillsTabs({ groups, learning, labels }: Props) {
           <TabsTrigger value="skills">{labels.tabSkills}</TabsTrigger>
           <TabsTrigger value="learning">🌱 {labels.tabLearning}</TabsTrigger>
         </TabsList>
-        <div className="flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1.5">
-            <Badge className="font-mono font-normal">Aa</Badge> {labels.legendCore}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Badge variant="outline" className="font-mono font-normal">Aa</Badge> {labels.legendUsed}
-          </span>
-        </div>
+        <p className="text-sm text-muted-foreground">
+          <span className="font-medium text-foreground">{labels.spokenLabel}:</span> {labels.spoken}
+        </p>
       </div>
 
       <TabsContent value="skills" className="rounded-md focus-visible:ring-[3px] focus-visible:ring-ring/50">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-4 sm:grid-cols-2">
           {groups.map((g) => (
             <li key={g.id}>
               <Card className="lift spotlight relative h-full gap-4 py-5">
@@ -49,7 +44,7 @@ export default function SkillsTabs({ groups, learning, labels }: Props) {
                   <ul className="flex flex-wrap gap-1.5">
                     {g.skills.map((s) => (
                       <li key={s.name}>
-                        <Badge variant={s.core ? "default" : "outline"} className="font-mono font-normal">
+                        <Badge variant="outline" className="font-mono font-normal">
                           {s.name}
                         </Badge>
                       </li>
@@ -63,7 +58,7 @@ export default function SkillsTabs({ groups, learning, labels }: Props) {
       </TabsContent>
 
       <TabsContent value="learning" className="rounded-md focus-visible:ring-[3px] focus-visible:ring-ring/50">
-        <ul className="grid gap-4 md:grid-cols-2">
+        <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {learning.map((l) => (
             <li key={l.id}>
               <Card className="lift spotlight relative h-full gap-4 py-5">

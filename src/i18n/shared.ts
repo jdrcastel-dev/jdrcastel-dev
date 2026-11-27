@@ -9,117 +9,58 @@ export const person = {
   resume: "Resume_Juan_Castelblanco.pdf",
 };
 
-// core: built with it and know it well (highlighted). Everything else: hands-on.
-export type Skill = { name: string; core?: boolean };
+export type Skill = { name: string };
 
+const chips = (...names: string[]) => names.map((name) => ({ name }));
+
+// The resume's Skills section, plus the AI tools Juan uses every day
 export const skillChips: Record<string, { icon: string; skills: Skill[] }> = {
-  frontend: {
-    icon: "⚛️",
-    skills: [
-      { name: "JavaScript", core: true }, { name: "TypeScript", core: true }, { name: "React", core: true },
-      { name: "Next.js", core: true }, { name: "Redux", core: true }, { name: "HTML/CSS", core: true },
-      { name: "Responsive UI", core: true },
-    ],
-  },
-  backend: {
-    icon: "🧩",
-    skills: [
-      { name: "Node.js", core: true }, { name: "Express", core: true }, { name: "REST APIs", core: true },
-      { name: "Microservices", core: true }, { name: "OAuth 2.0" }, { name: "Java" }, { name: "OOP" },
-    ],
-  },
-  aws: {
-    icon: "☁️",
-    skills: [
-      { name: "AWS Cloud Practitioner", core: true }, { name: "ECS" }, { name: "ECR" }, { name: "S3" },
-      { name: "DynamoDB" }, { name: "Cognito" },
-    ],
-  },
-  delivery: {
-    icon: "🚀",
-    skills: [
-      { name: "Docker", core: true }, { name: "CI/CD", core: true }, { name: "GitHub Actions" }, { name: "Jest" },
-      { name: "Jenkins" }, { name: "Git" },
-    ],
-  },
-  data: {
-    icon: "🗄️",
-    skills: [{ name: "SQL", core: true }, { name: "MongoDB" }, { name: "SQL Server" }, { name: "DynamoDB" }],
-  },
-  support: {
-    icon: "🛠️",
-    skills: [
-      { name: "Root-cause analysis", core: true }, { name: "Log analysis", core: true }, { name: "Linux" },
-      { name: "Bash" }, { name: "Windows" }, { name: "GitHub Copilot", core: true },
-      { name: "Claude Code", core: true },
-    ],
-  },
+  frontend: { icon: "⚛️", skills: chips("JavaScript", "TypeScript", "React", "Next.js", "Redux", "HTML", "CSS") },
+  backend: { icon: "🧩", skills: chips("Node.js", "Express", "NestJS", "REST APIs", "PostgreSQL", "Prisma", "SQL Server") },
+  cloud: { icon: "☁️", skills: chips("AWS (ECS, S3, DynamoDB, Cognito)", "Docker", "GitHub Actions", "Jest", "Git") },
+  tools: { icon: "🛠️", skills: chips("Claude Code", "GitHub Copilot", "Linux") },
 };
 
 export const learningChips: Record<string, { icon: string; items: string[] }> = {
-  agentic: {
-    icon: "🤖",
-    items: ["OpenAI Codex", "Agentic workflows", "Prompting for code", "Reviewing AI code"],
-  },
+  agentic: { icon: "🤖", items: ["OpenAI Codex", "Agentic workflows", "Prompting for code", "Reviewing AI code"] },
   integrations: {
     icon: "🧠",
     items: ["LLM APIs (Claude, OpenAI)", "Prompt engineering", "Structured output (Zod)", "Tool calling", "MCP"],
   },
-  casshy: {
-    icon: "🏗️",
-    items: ["Turborepo + pnpm", "NestJS", "Prisma", "PostgreSQL", "Better Auth", "Zod", "shadcn/ui", "Rive", "k3s"],
-  },
-  java: {
-    icon: "☕",
-    items: ["Spring Boot", "Spring Data JPA", "JUnit"],
-  },
+  java: { icon: "☕", items: ["Spring Boot", "Spring Data JPA", "JUnit"] },
 };
 
 export type ProjectMeta = {
   stack: Skill[];
-  tags: ("backend" | "web" | "aws")[];
-  links: { key: "learning" | "api" | "ui" | "code"; href: string }[];
+  tags: ("web" | "backend" | "aws")[];
+  links: { key: "api" | "ui" | "code"; href: string }[];
   featured?: boolean;
   group?: "extension"; // shown under "All" and the Extensions filter
 };
 
 export const projectMeta: Record<string, ProjectMeta> = {
-  casshy: {
+  kasshy: {
     featured: true,
-    stack: [
-      { name: "Next.js", core: true }, { name: "TypeScript", core: true }, { name: "NestJS" }, { name: "PostgreSQL" },
-      { name: "Prisma" }, { name: "Turborepo" }, { name: "shadcn/ui" }, { name: "Rive" }, { name: "Docker" },
-      { name: "Claude Code", core: true },
-    ],
+    stack: chips("Next.js", "TypeScript", "NestJS", "PostgreSQL", "Prisma"),
     tags: ["web", "backend"],
     links: [],
   },
-  incidenthub: {
-    stack: [
-      { name: "TypeScript", core: true }, { name: "NestJS" }, { name: "PostgreSQL" }, { name: "Prisma" },
-      { name: "Zod" }, { name: "LLM API" }, { name: "Docker", core: true },
+  fragments: {
+    stack: chips("Node.js", "Express", "AWS", "Docker"),
+    tags: ["web", "backend", "aws"],
+    links: [
+      { key: "api", href: "https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing" },
+      { key: "ui", href: "https://github.com/jdrcastel-dev/Microservice-fragments-UI" },
     ],
+  },
+  incidenthub: {
+    stack: chips("TypeScript", "NestJS", "PostgreSQL", "Prisma"),
     tags: ["backend"],
     links: [],
   },
-  fragments: {
-    stack: [
-      { name: "Node.js", core: true }, { name: "Express", core: true }, { name: "Cognito" }, { name: "S3" },
-      { name: "DynamoDB" }, { name: "Docker", core: true }, { name: "ECR" }, { name: "ECS" }, { name: "Jest" },
-      { name: "GitHub Actions" },
-    ],
-    tags: ["backend", "aws"],
-    links: [
-      { key: "api", href: "https://github.com/jdrcastel-dev/Microservice-fragments-Cloud-Computing" },
-      { key: "ui", href: "https://github.com/jdcastel/Microservice-fragments-UI" },
-    ],
-  },
   timer: {
     group: "extension",
-    stack: [
-      { name: "JavaScript", core: true }, { name: "Manifest V3" }, { name: "Service worker" },
-      { name: "chrome.alarms / storage" },
-    ],
+    stack: chips("JavaScript", "Manifest V3", "Service worker"),
     tags: ["web"],
     links: [],
   },
